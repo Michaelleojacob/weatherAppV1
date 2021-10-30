@@ -4,7 +4,6 @@ const domObj = {
   input: document.querySelector('#input'),
   name: document.querySelector('#name'),
   status: document.querySelector('#status'),
-  weather: document.querySelector('#weather'),
   feelsLike: document.querySelector('#feelsLike'),
   high: document.querySelector('#high'),
   low: document.querySelector('#low'),

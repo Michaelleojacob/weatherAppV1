@@ -9,8 +9,9 @@ export default async function myFetchCurrent(city) {
       throw new Error(`http request error ${response.status}`);
     }
     const parseResponse = await response.json();
-    console.log(parseResponse);
+    return parseResponse;
   } catch (err) {
     console.log(err);
   }
+  return 'nothing found';
 }
