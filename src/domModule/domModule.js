@@ -2,6 +2,9 @@ const domObj = {
   container: document.querySelector('#container'),
   form: document.querySelector('#form'),
   input: document.querySelector('#input'),
+};
+
+const li = {
   name: document.querySelector('#name'),
   status: document.querySelector('#status'),
   feelsLike: document.querySelector('#feelsLike'),
@@ -10,4 +13,6 @@ const domObj = {
   wind: document.querySelector('#wind'),
   humidity: document.querySelector('#humidity'),
 };
+
 export default domObj;
+export { li };
