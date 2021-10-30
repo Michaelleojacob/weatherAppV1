@@ -1,19 +1,20 @@
-import myFetchFiveDay from './fetch/fetchFiveDay';
-import myInputForm from './view/inputForm';
+import eventManager from './eventManager/eventManager';
+import myFetchCurrent from './fetch/fetchCurrent';
+import './style.css';
 
 const myApp = () => {
   const app = {
     init() {
-      // this.runFetch();
+      this.testing();
+      this.manageEvents();
     },
-    runFetch() {
-      myFetchFiveDay('Texas');
+    testing() {
+      myFetchCurrent('texas');
+    },
+    manageEvents() {
+      eventManager();
     },
   };
   return app.init();
 };
 myApp();
-
-const container = document.querySelector('#container');
-const myform = myInputForm();
-container.appendChild(myform);
