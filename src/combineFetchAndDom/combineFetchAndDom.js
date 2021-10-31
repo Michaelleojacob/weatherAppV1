@@ -9,7 +9,16 @@ function extractUsefulProps(obj) {
   const low = obj.main.temp_min;
   const wind = obj.wind.speed;
   const { humidity } = obj.main;
-  return [name, status, feelsLike, high, low, wind, humidity];
+  // return [name, status, feelsLike, high, low, wind, humidity];
+  return {
+    name,
+    status,
+    feelsLike,
+    high,
+    low,
+    wind,
+    humidity,
+  };
 }
 
 function mutateDom(obj) {
@@ -17,11 +26,26 @@ function mutateDom(obj) {
   console.log(obj);
 }
 
+// class DisplayWeatherInfo {
+//   constructor(responseObj) {
+//     // make object based in kevlin
+//   }
+//   // combine li and responseObj
+
+//   // render to screen
+
+//   // change f to c
+//   // rerender?
+
+//   // change c to f
+//   // rerender?
+// }
+
 export default async function myCombineFetchAndDom(query) {
   console.log(query);
   const response = await myFetchCurrent(query);
   // now we need to run a function that takes the response and
   // shoves the response into the dom
-  const usefulprops = await extractUsefulProps(response);
+  const usefulprops = extractUsefulProps(response);
   mutateDom(usefulprops);
 }
