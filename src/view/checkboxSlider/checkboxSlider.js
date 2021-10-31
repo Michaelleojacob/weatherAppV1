@@ -19,7 +19,3 @@ export default function checkboxSlider() {
   wrapper.appendChild(sliderRound);
   return wrapper;
 }
-
-// label > checkbox > span
-
-// theirs =  checkbox | switch > inner > disc

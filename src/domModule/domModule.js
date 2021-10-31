@@ -2,6 +2,7 @@ const domObj = {
   container: document.querySelector('#container'),
   form: document.querySelector('#form'),
   input: document.querySelector('#input'),
+  toggler: document.querySelector('#toggler'),
 };
 
 const li = {

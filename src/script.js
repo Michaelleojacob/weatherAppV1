@@ -1,13 +1,17 @@
 import myCombineFetchAndDom from './combineFetchAndDom/combineFetchAndDom';
 import eventManager from './eventManager/eventManager';
-import checkboxSlider from './view/checkboxSlider/checkboxSlider';
+import myView from './view/view';
 import './style.css';
 
 const myApp = () => {
   const app = {
     init() {
+      this.manageView();
       this.manageEvents();
       this.testing();
+    },
+    manageView() {
+      myView();
     },
     manageEvents() {
       eventManager();
@@ -38,7 +42,3 @@ myApp();
 //   renderDom(b);
 // };
 // a();
-
-const newSlider = checkboxSlider();
-const container = document.querySelector('#container');
-container.appendChild(newSlider);
